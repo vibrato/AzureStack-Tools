@@ -1,4 +1,4 @@
-$ModuleLocation = (Get-ChildItem -Path ..\ -Filter 'AzureRM.CloudCapabilities.psm1' -Recurse).FullName
+$ModuleLocation = (Get-ChildItem -Path $ENV:AGENT_BUILDDIRECTORY -Filter 'AzureRM.CloudCapabilities.psm1' -Recurse).FullName
 Write-Host "Importing module from: $ModuleLocation"
 try {
     Import-Module $ModuleLocation -Force    
