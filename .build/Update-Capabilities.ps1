@@ -18,8 +18,6 @@ if (Test-Path $ModuleLocation -PathType Leaf){
     Get-AzureRMCloudCapability `
         -Location $Location `
         -OutputPath $OutputPath `
-        -IncludeComputeCapabilities `
-        -IncludeStorageCapabilities `
         -Verbose
 
     Write-Host "##vso[task.setvariable variable=OutputPath]$OutputPath"
